@@ -11,11 +11,10 @@ def json_to_yaml_parser(json_file,yaml_file):
     try:
         with open(json_file,"r") as file_to_convert:
             data = json.load(file_to_convert)
-            file_to_convert.close()
-
+            
         with open(yaml_file, "w") as file_to_fill:
             yaml.dump(data,file_to_fill,sort_keys=False)
-            file_to_fill.close() 
+            
 
         return "\nDone"
 
